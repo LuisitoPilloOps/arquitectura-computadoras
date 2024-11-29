@@ -1,0 +1,225 @@
+/* CONFIGURACIÓN GENERAL DE BODY */
+body.color-fondo{
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 1.3rem;
+    line-height: 1.2em;
+    background-color: #18142f;
+    margin: 0;
+    background-attachment: fixed;
+}
+
+/*-----------------CONFIGURACIÓN DE LA CABECERA-----------------------------*/
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.header{
+    background-color: #282248fa;
+    color: white;
+    padding: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+.header a{
+    color:white;
+    text-decoration: none;
+    
+}
+.logo-nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.logo{
+    font-size: 1.3em;
+    text-align: center;
+    margin-left: 80px;
+}
+.menu-icon{
+    display: none;
+}
+.navigation ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.navigation li{
+    display: inline-block;
+}
+.navigation ul li a{
+    display: block;
+    padding: 0.2rem 0.5rem;
+    transition: all 0.4s linear;
+    border-radius: 5px;
+}
+.navigation ul li a:hover{
+    background-color: rgba(204, 204, 204, 0.158);
+}
+.icon{
+    content: url("../media/images/mbicon.png");
+    height: 85px;
+    padding: 10px;
+}
+.main{
+    padding-top: 6rem;
+}
+.footer{
+    background: #282248;
+    padding: 1rem 0;
+    text-align: center;
+    margin-top: 6rem;
+    font-size: 16px;
+    align-items: center;
+}
+.autor{
+    padding: 100px;
+    margin-top: 78px;
+    margin-bottom: 200px;
+    text-align: center;
+    font-size: 24px;
+}
+
+@media only screen and (max-width: 790px) {
+    .menu-icon{
+        display: block;
+        cursor: pointer;
+        padding: 0.2rem 0.2rem;
+        font-size: 0.8em;
+    }
+    .logo{
+        margin-left: 0%;
+        margin-right: 2vh;
+        text-align: center;
+        font-size: 0.8em;
+    }
+    .navigation{
+        width: 100%;
+        margin-top: 1rem;
+    }
+    .navigation ul{
+        display: none;
+    }
+    .navigation ul.show{
+        display: block;
+        margin: 5px;
+    }
+    .navigation ul li{
+        display: block;
+    }
+    .navigation ul li a{
+        display: block;
+        padding: 0.2rem;
+        transition: all 0.4s linear;
+        border-radius: 5px;
+        font-size: 0.8em;
+    }
+    .navigation ul li a:hover{
+        background-color: rgba(204, 204, 204, 0.158);
+    }
+    .icon{
+        height: 60px;
+        margin-top: 2px;
+        padding: 10px;
+    }
+    .textPag{
+        text-align: center;
+        font-size: 14px;
+    }
+    .title{
+        margin-bottom: 20px;
+        margin-top: 20px;
+        font-size: 20px;
+    }
+    .menu{
+        content: url("../media/images/menu.png");
+        height: 20px;
+        margin-top: 7px;
+        margin-right: 3px;
+        text-align: center;
+    }
+    .videos{
+        width: 300px;
+        height: auto;
+        text-align: center;
+    }
+    
+}
+
+/*-----------------CONFIGURACIÓN DEL CONTENIDO-----------------------------*/
+.textPag{
+    width: 80%;
+    margin: auto;
+    font-family: sans-serif;
+    text-align: start;
+    font-size: 14px;
+}
+.textPag2{
+    width: 80%;
+    margin: auto;
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 14px;
+}
+.imageText{
+    text-align: center;
+}
+h6.title{
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.titleT{
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+    text-decoration: underline;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+.temas{
+    list-style: none;
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin: 0;
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+}
+.ulTemas{
+    list-style: none;
+    margin-right: 50px;
+}
+.logotec{
+    content: url("../media/images/logotec.png");
+    height: 70px;
+    display: inline;
+    text-align: center;
+}
+.botText{
+    text-align: center;
+}
+.botImg{
+    text-align: left;
+    display: inline-block;
+    font-size: 16px;
+}
+
+/*----------------- IMAGENES UTILIZADAS -----------------------------*/
+.imageAc{
+    content: url("../media/images/f1.jpg");
+	width: 50%;
+    margin-top: 0.1em;
+}
+.imageAc2{
+    content: url("../media/images/basicComputer.jpg");
+    width: 40%;
+    background-color: white;
+}
+.pdf{
+    text-align: center;
+}

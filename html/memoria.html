@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Arquitectura de Computadoras</title>
+    <!-- Icono que aparece en la pestaña-->
+    <link rel = "icon title" href = "media/images/titleicon.png">
+    <!-- Cargando el CSS-->
+    <link rel = "stylesheet" type = "text/css" media = "screen" href = "../css/Style.css"/>
+    <!-- API de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@200&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <meta name = "viewport" content="width=device-width, initial-scale=1">
+</head>
+<body class = "color-fondo">
+    <header class = "header">
+        <div class = "container logo-nav-container">
+            <img class = "icon"><a href= "" class = "logo">Arquitectura de Computadoras</a>
+            <span class="menu-icon"><img class="menu"></span>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="temario.html">Temario</a></li>
+                    <li><a href="autor.html">Autor</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class = "main">
+        <div class="container">
+            <div class = "textPag">
+                <h6 class = "title">Memoria</h6>
+                    <p>
+                        <b>¿Qué es?</b>
+                    </p>
+                    <p>
+                        Es un dispositivo que puede mantenerse en por lo menos dos
+                        estados estables por un cierto periodo de tiempo.
+                        Cada uno de estos estados estables puede utilizarse para
+                        representar un bit.
+                        A un dispositivo con la capacidad de almacenar por lo menos
+                        un bit se le conoce como celda básica de memoria.<br><br>
+
+                        Un dispositivo de memoria completo se forma con varias
+                        celdas básicas y los circuitos asociados para poder leer y
+                        escribir dichas celdas básicas, agrupadas como localidades
+                        de memoria que permitan almacenar un grupo de N bits.
+                    </p>
+                    <p>
+                        El número de bits que puede almacenar cada localidad de
+                        memoria es conocido como el ancho de palabra de la
+                        memoria. Coincide con el ancho del bus de datos.<br><br>
+
+                        Uno de los circuitos auxiliares que integran la memoria es el
+                        decodificador de direcciones. Su función es la de activar a
+                        las celdas básicas que van a ser leídas o escritas a partir de la
+                        dirección presente en el bus de direcciones.<br>
+
+                        Tiene como entradas las N líneas del bus de direcciones y 2N líneas de
+                        habilitación de localidad, cada una correspondiente a una
+                        combinación binaria distinta de los bits de direcciones.
+                    </p>
+                    <h6 class = "title">Memoria principal semiconductora</h6>
+                    <p>
+                        La memoria del semiconductor utiliza en su arquitectura
+                        circuitos integrados basados en semiconductores para
+                        almacenar información.<br>
+                        Un chip de memoria de semiconductor puede contener
+                        millones de minúsculos transistores o condensadores.
+                        Existen memorias de semiconductor de ambos
+                        tipos: volátiles y no volátiles.<br>
+                        En las computadoras modernas, la memoria principal
+                        consiste casi exclusivamente en memoria de semiconductor
+                        volátil y dinámica, también conocida como memoria
+                        dinámica de acceso aleatorio o más comúnmente RAM
+                        (Random Access Memory).
+                    </p>
+
+                    <div class="imageText">
+                        <img src="../media/images/memorias/ram.jpg" width="300px" height="200px">
+                    </div>
+
+                    </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="botText"><a class = "logotecima" href = "https://saltillo.tecnm.mx/"><img class = "logotec"></a></div>
+            <div class="botImg">Instituto Tecnológico de Saltillo</div>
+        </div>
+    </footer>
+    <script src = "https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src = "../scripts.js"></script>
+</body>   
+</html>

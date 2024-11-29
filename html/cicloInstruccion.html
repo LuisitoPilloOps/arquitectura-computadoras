@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Arquitectura de Computadoras</title>
+    <!-- Icono que aparece en la pestaña-->
+    <link rel = "icon title" href = "media/images/titleicon.png">
+    <!-- Cargando el CSS-->
+    <link rel = "stylesheet" type = "text/css" media = "screen" href = "../css/Style.css"/>
+    <!-- API de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@200&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <meta name = "viewport" content="width=device-width, initial-scale=1">
+</head>
+<body class = "color-fondo">
+    <header class = "header">
+        <div class = "container logo-nav-container">
+            <img class = "icon"><a href= "" class = "logo">Arquitectura de Computadoras</a>
+            <span class="menu-icon"><img class="menu"></span>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="temario.html">Temario</a></li>
+                    <li><a href="autor.html">Autor</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class = "main">
+        <div class="container">
+            <div class = "textPag">
+                <h6 class = "title">El ciclo de la instrucción.</h6>
+                <p>
+                    Un ciclo de instrucción (también llamado ciclo de fetch-and-execute o ciclo de fetch-decode-execute en inglés) 
+                    es el período que tarda la unidad central de proceso (CPU) en ejecutar una instrucción de lenguaje máquina.<br>
+                    1. Buscar la instrucción en la memoria principal<br>
+                    Se vuelca el valor del contador de programa sobre el bus de direcciones. Entonces la CPU pasa la instrucción de
+                    la memoria principal a través del bus de datos al Registro de Dirección de Memoria (MAR). 
+                    A continuación el valor del MAR es colocado en el Registro de Instrucción Actual (CIR), un circuito que guarda la
+                    instrucción temporalmente de manera que pueda ser decodificada y ejecutada.<br>
+                    2. Decodificar la instrucción<br>
+                    El decodificador de instrucción interpreta e implementa la instrucción. El registro de instrucción (IR) mantiene la instrucción en curso mientras el contador de programa (PC, program counter) guarda la dirección de memoria de la siguiente instrucción a ser ejecutada.
+                    Recogida de datos desde la memoria principal
+                    Se accede al banco de registros por los operandos (solo si es necesario)
+                    Se calcula el valor del operando inmediato con extensión de signo (solo si es necesario)
+                    También se lee la dirección efectiva de la memoria principal si la instrucción tiene una dirección indirecta, y se recogen los datos requeridos de la memoria principal para ser procesados y colocados en los registros de datos.<br>
+                    3. Ejecutar la instrucción<br>
+                    A partir del registro de instrucción, los datos que forman la instrucción son decodificados por la unidad de control. 
+                    Ésta interpreta la información como una secuencia de señales de control que son enviadas a las unidades funcionales relevantes de la CPU para realizar la operación requerida por la instrucción poder terminarla y seguir así.
+                </p>
+
+                <h6 class = "title">Segmentación de instrucciones</h6>
+                <p>
+                    El objetivo de la segmentación es ejecutar simultáneamente diferentes etapas de distintas instrucciones, 
+				    lo cual permite aumentar el rendimiento del procesador sin tener que hacer más rápidas todas las unidades del procesador (ALU, UC, buses, etc.) y sin tener que duplicarlas.
+				    La división de la ejecución de una instrucción en diferentes etapas se debe realizar de tal manera que cada etapa tenga la misma duración, generalmente un ciclo de reloj. Es necesario añadir 
+                    registros para almacenar los resultados intermedios entre las diferentes etapas, de modo que la información generada en una etapa esté disponible para la etapa siguiente.
+                </p>
+
+                <div class="imageText">
+                    <img src="../media/images/ciclo de la instruccion/1.jpg" width="300px" height="220px">
+                </div>
+                
+                <h6 class = "title">Ciclo FDE</h6>
+                    <p>
+                        Los procesadores no son diferentes desde cierto punto de vista a un motor de combustión, los cuales siempre
+                        realizan un proceso continuo de explosión del combustible en diferentes etapas, ya sean de 2 tiempos o de 4 tiempos. 
+                        El motivo de ello es que los procesadores funcionan en tres etapas distintas en su versión más simple que son las siguientes:<br>
+        
+                        -Fetch o Captación: En la que la instrucción es captada desde la memoria RAM y copiada a dentro del procesador.<br>
+                        -Decode o Descodificacion: En la que la instrucción previamente captada es descodificada y enviada a las unidades de ejecución<br>
+                        -Execute o Ejecución: Donde la instrucción es resuelta y el resultado escrito en los registros internos del 
+                        procesador o en una dirección de memoria de la RAM<br>
+                 </p>
+                 <h6 class = "title">Conjunto de instrucciones caracteristicas y funciones</h6>
+                 <p>
+                    Ante el diseño de un nuevo ordenador de propósito general hay que plantearse la siguiente
+                    cuestión: ¿Qué tipos de instrucciones deben ser incluidos en su conjuntos de instrucciones?
+                    Antes de responder a esta pregunta, analizaremos las características que deben tener los juegos
+                    de instrucciones de las máquinas.
+                    Los conjuntos de instrucciones de las máquinas deben tender a poseer una serie de propiedades, bastante ideales e imprecisas, que pueden resumirse en las siguientes:
+                    El conjunto de instrucciones de un computador debe ser completo en el sentido de que
+                    se pueda construir un programa para evaluar una función computable usando una cantidad de memoria razonable y empleando un tiempo moderado, es decir, el número de
+                    instrucciones de ese programa no debe ser demasiado elevado.<br>
+                    Los juegos de instrucciones también tienen que ser eficientes, esto significa que las funciones 
+                    más necesarias deben poder realizarse usando pocas instrucciones.<br>
+                    El conjunto de instrucciones de una máquina debe ser regular, es decir debe ser simétrico
+                    (por ejemplo, si existe una instrucción de desplazamiento a la izquierda, debe haber otra
+                    de desplazamiento a la derecha, etc.) y ortogonal, es decir, deben poder combinarse, en
+                    la medida de lo posible, todos las operaciones con todos los tipos de datos y modos de
+                    direccionamiento.
+                 </p>
+                 <h6 class = "title">Modos de almacenamiento</h6>
+                 <p>
+                    Los ordenadores utilizan técnicas de direccionamiento con los siguientes fines:<br>
+                    Dar versatilidad de programación al usuario proporcionando facilidades tales como índices, direccionamientos indirectos, etc., esta versatilidad nos servirá para manejar estructuras de datos complejas como vectores, matrices, etc.
+                    Reducir el número de bits del campo de operando.<br>
+                    Al usuario que tiene poca experiencia, la variedad de modos de direccionamiento en un
+                    procesador le puede parecer excesivamente complicada. Sin embargo, la disponibilidad de 
+                    diferentes esquemas de direccionamiento le da al programador experimentado flexibilidad para
+                    escribir programas que son más eficientes en cuanto a número de instrucciones y tiempo de
+                    ejecución.<br>
+                    Es tal la importancia de los modos de direccionamiento que la potencia de una máquina se
+                    mide tanto por su repertorio de instrucciones como por la variedad de modos de direccionamiento que es capaz de admitir.
+                    Definición: Los modos de direccionamiento de un procesador son las diferentes formas de
+                    transformación del campo de operando de la instrucción en la dirección del operando.
+                    En esta definición el término dirección debe interpretarse en su sentido más general de
+                    localización del operando, en cualquier lugar, y no en el sentido más estricto de dirección de
+                    memoria.
+                 </p>
+                    <div class="imageText">
+                        <img src="../media/images/ciclo de la instruccion/2.webp" width="300px" height="220px">
+                    </div>
+
+                    </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="botText"><a class = "logotecima" href = "https://saltillo.tecnm.mx/"><img class = "logotec"></a></div>
+            <div class="botImg">Instituto Tecnológico de Saltillo</div>
+        </div>
+    </footer>
+    <script src = "https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src = "../scripts.js"></script>
+</body>   
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Arquitectura de Computadoras</title>
+    <!-- Icono que aparece en la pestaña-->
+    <link rel = "icon title" href = "media/images/titleicon.png">
+    <!-- Cargando el CSS-->
+    <link rel = "stylesheet" type = "text/css" media = "screen" href = "../css/Style.css"/>
+    <!-- API de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@200&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <meta name = "viewport" content="width=device-width, initial-scale=1">
+</head>
+<body class = "color-fondo">
+    <header class = "header">
+        <div class = "container logo-nav-container">
+            <img class = "icon"><a href= "" class = "logo">Arquitectura de Computadoras</a>
+            <span class="menu-icon"><img class="menu"></span>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="temario.html">Temario</a></li>
+                    <li><a href="autor.html">Autor</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class = "main">
+        <div class="container">
+            <div class = "textPag">
+                <h6 class = "title">Manejo de entrada y salida.</h6>
+                    <p>
+                        El intercambio de información entre componentes, 
+                        computadoras y usuarios es realizado mediante dispositivos
+                        que denominamos de manera genérica periféricos.
+                        Para hacer una operación entre el procesador y un periférico,
+                        es necesario conectar estos dispositivos a la computadora y
+                        gestionar de manera efectiva la transferencia de datos.
+                        Para poder realizarlo, la computadora dispone del sistema de módulos de Entrada/Salida/ES.
+                    </p>
+                    <p>
+                        Estos módulos son las interfaces que tiene la computadora con el exterior y
+                        el objetivo que tiene es facilitar las operaciones de E/S entre los periféricos
+                        y la memoria o los registros del procesador.
+                    </p>
+                    <div class="imageText">
+                        <img src="../media/images/ES/MODULOS.png" width="300px" height="300px">
+                    </div>
+                    <p>
+                        Los módulos E/S están conectados con el procesador y la
+                        memoria principal, y cada uno controla uno o más dispositivos externos.
+                        La arquitectura de E/S es su interfaz con el exterior, esta
+                        arquitectura se diseña de manera que permita una forma sistemática de controlar
+                        las interacciones con el mundo exterior y proporcione al sistema operativo la
+                        información que necesita para gestionar la actividad de E/S.
+                    </p>
+                    <p>
+                        Durante el intercambio de dato, si es una operación de lectura
+                        (entrada), el procesador lee el registro de datos del módulo de E/S
+                        para recoger el dato enviado por el periférico, y lo guarda en memoria;
+                        si es una operación de escritura;(salida), el procesador toma de la memoria
+                        el dato que queremos enviar al periférico y lo escribe en el registro de datos
+                        del módulo de E/S.
+                    </p>
+
+                    <div class="imageText">
+                        <img src="../media/images/ES/modulos2.png" width="300px" height="300px">
+                    </div>
+
+                    <h6 class = "title">Entrada y salida programada.</h6>
+                    <p>
+                        Interfaz que traduce la información asíncrona y analógica del mundo exterior a la información 
+                        síncrona y codificada del computador. (externo). - Coordina el correcto flujo de información 
+                        entre uno o varios dispositivos externos (impresora, monitor) e internos (memoria, procesador).
+                    </p>
+                    <h6 class = "title">Entrada y salida por interrupciones</h6>
+                    <p>
+                        En el caso de la entrada/salida por interrupciones, es el dispositivo quien establece el momento
+                        en que se realiza la transferencia de los datos, avisando a la CPU de que ha ocurrido un evento 
+                        (por ejemplo, que el usuario haya presionado una tecla).
+                    </p>
+                    <h6 class = "title">Acceso directo a memoria</h6>
+                    <p>
+                        El DMA (acceso directo a la memoria) permite que el dispositivo de red mueva los datos del paquete 
+                        directamente a la memoria del sistema, reduciendo la utilización de la CPU.
+                    </p>
+                    <div class="imageText">
+                        <img src="../media/images/ES/modulos3.png" width="300px" height="300px">
+                    </div>
+
+                    </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="botText"><a class = "logotecima" href = "https://saltillo.tecnm.mx/"><img class = "logotec"></a></div>
+            <div class="botImg">Instituto Tecnológico de Saltillo</div>
+        </div>
+    </footer>
+    <script src = "https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src = "../scripts.js"></script>
+</body>   
+</html>

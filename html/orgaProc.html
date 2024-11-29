@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Arquitectura de Computadoras</title>
+    <!-- Icono que aparece en la pestaña-->
+    <link rel = "icon title" href = "media/images/titleicon.png">
+    <!-- Cargando el CSS-->
+    <link rel = "stylesheet" type = "text/css" media = "screen" href = "../css/Style.css"/>
+    <!-- API de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@200&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <meta name = "viewport" content="width=device-width, initial-scale=1">
+</head>
+<body class = "color-fondo">
+    <header class = "header">
+        <div class = "container logo-nav-container">
+            <img class = "icon"><a href= "" class = "logo">Arquitectura de Computadoras</a>
+            <span class="menu-icon"><img class="menu"></span>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="temario.html">Temario</a></li>
+                    <li><a href="autor.html">Autor</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class = "main">
+        <div class="container">
+            <div class = "textPag">
+                <h6 class = "title">Organización del procesador.</h6>
+                    <p>
+                        La función principal de un procesador es ejecutar instrucciones y la organización que tiene viene condicionada por las tareas que debe realizar y por cómo
+                        debe hacerlo. Los procesadores están diseñados y operan según una señal de sincronización. Esta señal, conocida como señal de reloj, es una señal en forma de onda cuadrada periódica con una determinada frecuencia. Todas las operaciones hechas
+                        por el procesador las gobierna esta señal de reloj: un ciclo de reloj determina la unidad básica de tiempo, es decir, la duración mínima de una operación
+                        del procesador.
+                        Para ejecutar una instrucción, son necesarios uno o más ciclos de reloj, dependiendo del tipo de instrucción y de los operandos que tenga.
+                        Las prestaciones del procesador no las determina solo la frecuencia de reloj,
+                        sino otras características del procesador, especialmente del diseño del juego de
+                        instrucciones y la capacidad que tiene para ejecutar simultáneamente múltiples instrucciones.
+                    </p>
+                    <div class="imageText">
+                        <img src="../media/images/orgaProc/1.jpg" width="300px" height="200px">
+                    </div>
+                    <h6 class = "title">Estrucutura de registros.</h6>
+                    <p>
+                        Se emplean para controlar las instrucciones en ejecución, manejar direccionamiento de memoria y propiciar la capacidad aritmética.
+                        Los registros vienen de tres tipos: datos, direcciones e índice, que tiene lugar en casi todos los aspectos de la operación del CPU. 
+                        El tamaño de un registro depende del CPU; los más simples tienen registros que aceptan 8 o 16 bits de datos y los más complejos 
+                        tienen registros de 32, 48 o 64 bits.
+                    </p>
+                    <div class="imageText">
+                        <img src="../media/images/orgaProc/2.jpg" width="300px" height="200px">
+                    </div>
+                    <h6 class = "title">Registros visibles para el usuario.</h6>
+                    <p>
+                        Los registros en la CPU sirven para dos funciones:
+                        • Registros visibles para el usuario: permiten al programador minimizar las referencias
+                        a la memoria principal mediante la optimización de su uso.<br>
+                        • Registros de control y estado: son utilizados por la unidad de control para controlar la
+                        operación de la CPU y por los programas del sistema operativo para controlar la
+                        ejecución de programas.<br>
+                        REGISTROS VISIBLES PARA EL USUARIO.
+                        Un registro visible para el usuario es aquél que puede referenciarse por medio del
+                        lenguaje máquina que la CPU ejecuta. Se pueden caracterizar en las siguientes categorías:<br>
+                        • Propósito general.<br>
+                        • Datos.<br>
+                        • Direcciones.<br>
+                        • Códigos condicionales.<br>
+                        Los registros de propósito general son utilizados por el programador para diversas
+                        funciones. En principio cualquier registro puede utilizarse para contener el operando de cualquier
+                        instrucción. No obstante, pueden existir restricciones (por ejemplo, pueden existir registros para
+                        operaciones en coma flotante).
+                        En algunos casos, estos registros pueden utilizarse para funciones de direccionamiento
+                        (por ejemplo, desplazamiento, indirecto por registro). En otros casos, existe una distinción clara
+                        entre registros de datos y direcciones. Los primeros sólo pueden contener datos, mientras que los
+                        segundos pueden ser también de propósito general o estar dedicados a un modo particular de
+                        direccionamiento. Por ejemplo:<br>
+                        • Punteros de segmento: en máquinas con direccionamiento segmentado, un registro
+                        segmento contiene la dirección de la base del segmento. Puede haber múltiples
+                        registros, por ejemplo uno para el sistema operativo y otro para el proceso actual.<br>
+                        • Registros índice: Se utilizan para direccionamiento indexado y pueden ser
+                        autoindexados.<br>
+                        • Puntero de pila: si existe direccionamiento por pila visible al usuario, el pila está
+                        generalmente en memoria y hay un registro dedicado que apunta a la cima. Esto
+                        permite direccionamiento implícito.<br>
+                        Con el uso de registros especializados, pueden estar implícitos en el código de operación,
+                        ahorrando bits del especificador, que sólo deberá distinguir uno entre un conjunto determinado y
+                        no uno de entre todos los registros. No obstante, la excesiva especialización limita la flexibilidad. 
+                    </p>
+                    <h6 class = "title">Escoger un procesador.</h6>
+                    <p>
+                        Las características más importantes a considerar al escoger
+                        un CPU en una aplicación, son:<br>
+                    </p> 
+                    <ul>
+                        <li>
+                            Modelo del programador (Conjunto de registros que el
+                            programador puede utilizar), forman el modelo mental del
+                            CPU que el programador utiliza al programar en
+                            ensamblador.
+                        </li>
+                        <li>
+                            Conjunto de instrucciones que puede ejecutar el CPU.
+                            Los modos de direccionamiento que pueden usarse para
+                            obtener los operandos de las instrucciones.
+                        </li>
+                        <li>
+                            Ciclo de instrucción (el conjunto de pasos que realiza el CPU
+                            para procesar cada instrucción)
+                            Buses de interconexión, usados para que el CPU lea y
+                            escriba a la memoria.
+                        </li>
+                    </ul>
+                    <p>
+                        No hace mucho tiempo, el procesador era algo totalmente
+                        desconocido por los usuarios de PCs.
+                        Esto fue cambiando con el tiempo y en la actualidad
+                        cualquier persona al comprar un equipo se pregunta acerca
+                        de los atributos elementales de este dispositivo.
+                        Es que el procesador es una parte esencial de la
+                        computadora, por eso generalmente se la conoce como su
+                        “cerebro”.<br>
+
+                        Para la selección de los procesadores a utilizar en los equipos
+                        necesitamos ver las acciones tales como:<br><br>
+
+                        <u>Acciones Directas</u><br><br>
+                        Integrar un nuevo sistema de cómputo.
+                        Reemplazar un CPU dañado.
+                        Actualizar un sistema de cómputo.<br><br>
+
+                        <u>Acciones Indirectas</u><br><br>
+                        Comprar equipo de cómputo nuevo.
+                        Construir un equipo de control – Microcontrolador.
+                    </p>
+                    <div class="imageText">
+                        <img src="../media/images/orgaProc/3.webp" width="300px" height="220px">
+                    </div>
+
+                    </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="botText"><a class = "logotecima" href = "https://saltillo.tecnm.mx/"><img class = "logotec"></a></div>
+            <div class="botImg">Instituto Tecnológico de Saltillo</div>
+        </div>
+    </footer>
+    <script src = "https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src = "../scripts.js"></script>
+</body>   
+</html>

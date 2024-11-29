@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Arquitectura de Computadoras</title>
+    <!-- Icono que aparece en la pestaña-->
+    <link rel = "icon title" href = "../media/images/titleicon.png">
+    <!-- Cargando el CSS-->
+    <link rel = "stylesheet" type = "text/css" media = "screen" href = "../css/Style.css"/>
+    <!-- API de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@200&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <meta name = "viewport" content="width=device-width, initial-scale=1">
+</head>
+<body class = "color-fondo">
+    <header class = "header">
+        <div class = "container logo-nav-container">
+            <img class = "icon"><a href= "" class = "logo">Arquitectura de Computadoras</a>
+            <span class="menu-icon"><img class="menu"></span>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="temario.html">Temario</a></li>
+                    <li><a href="autor.html">Autor</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class = "main">
+        <div class="container">
+            <div class = "textPag">
+                <h6 class = "title">Sistemas de memoria en multiprocesadores.</h6>
+                <ul>
+                    <li>
+                        Todos los procesadores acceden a una memoria común.
+                    </li>
+                    <li>
+                        La comunicación entre procesadores se hace a través de la
+                        memoria.
+                    </li>
+                    <li>
+                        Se necesitan primitivas de sincronismo para asegurar el
+                        intercambio de datos.
+                    </li>
+                </ul>
+                <h6 class = "title">Redes de interconexión dinámica.</h6>
+                <p>
+                    Una red dinámica es una red cuya topología puede variar durante 
+                    el curso de la ejecución de un programa paralelo o entre dos ejecuciones de programas. 
+                    La red está constituida por elementos materiales específicos, llamados commutadores o switches. 
+                    Las redes dinámicas se utilizan sobre todo en los multiprocesadores.
+                </p>
+                <h6 class = "title">Medio compartido.</h6>
+                <p>
+                    la memoria se organiza en uno o varios módulos, compartidos por todos los procesadores a 
+                    través de distintos tipos de interconexión (tratados más adelante), con un acceso constante. A este tipo de arquitectura se le conoce como UMA2.
+                </p>
+                <h3>Características de los medios compartidos</h3>
+                    <p>Entre las características de los medios compartidos se encuentran:</p>
+                    <ul>
+                        <li>
+                            Tiempos de acceso a memoria uniformes, ya que todos los procesadores se
+                            encuentran igualmente comunicados con la memoria principal.
+                        </li>
+                        <li>
+                            Las lecturas y escrituras de cada uno de los procesadores tienen exactamente
+                            las mismas latencias
+                        </li>
+                        <li>
+                            La programación es mucho más fácil que en los MMD, debido a que la gestión
+                            de la memoria de cada módulo es transparente para el programador.
+                        </li>
+                        <li>
+                            Al acceder simultáneamente a la memoria se producen colisiones y esperas, 
+                            lo que es un problema.
+                        </li>
+                        <li>
+                            Debido a la organización de la arquitectura, es poco escalable en número de
+                            procesadores, debido a que puede surgir un cuello de botella si se aumenta el número de CPU’s.
+                        </li>
+                    </ul>
+                <h6 class = "title">Conmutadas.</h6>
+                <p>
+                    Cada procesador (Pi) y cada módulo de memoria (Mi) tienen su
+                    propio bus. Existe un conmutador (S) en los puntos de intersección
+                    que permite conectar un bus de memoria con un bus de procesador.
+                    Para evitar conflictos cuando más de un procesador pretende acceder
+                    al mismo módulo de memoria se establece un orden de prioridad. Se
+                    trata de una red sin bloqueo con una conectividad completa pero de
+                    alta complejidad.
+                </p>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="botText"><a class = "logotecima" href = "https://saltillo.tecnm.mx/"><img class = "logotec"></a></div>
+            <div class="botImg">Instituto Tecnológico de Saltillo</div>
+        </div>
+    </footer>
+    <script src = "https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src = "../scripts.js"></script>
+</body>   
+</html>

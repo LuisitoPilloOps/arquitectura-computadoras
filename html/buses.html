@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Arquitectura de Computadoras</title>
+    <!-- Icono que aparece en la pestaña-->
+    <link rel = "icon title" href = "media/images/titleicon.png">
+    <!-- Cargando el CSS-->
+    <link rel = "stylesheet" type = "text/css" media = "screen" href = "../css/Style.css"/>
+    <!-- API de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@200&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <meta name = "viewport" content="width=device-width, initial-scale=1">
+</head>
+<body class = "color-fondo">
+    <header class = "header">
+        <div class = "container logo-nav-container">
+            <img class = "icon"><a href= "" class = "logo">Arquitectura de Computadoras</a>
+            <span class="menu-icon"><img class="menu"></span>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="temario.html">Temario</a></li>
+                    <li><a href="autor.html">Autor</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class = "main">
+        <div class="container">
+            <div class = "textPag">
+                <h6 class = "title">Buses.</h6>
+                <p>
+                    Existen dos tipos primordiales de buses (conexiones) para el
+                    envío de la información: bus paralelo o serial.
+                    Hay diferencias en el desempeño y hasta hace unos años se
+                    consideraba que el uso apropiado dependía de la longitud
+                    física de la conexión: para cortas distancias el bus paralelo,
+                    para largas el serial.<br><br>
+                </p>
+                <h6 class = "title">Bus paralelo</h6>
+                <p>
+                    Es un bus en el cual los datos son enviados por
+                    bytes al mismo tiempo, con la ayuda de varias líneas que
+                    tienen funciones fijas. La cantidad de datos enviada es
+                    bastante grande con una frecuencia moderada y es igual al
+                    ancho de los datos por la frecuencia de funcionamiento. En
+                    los computadores ha sido usado de manera intensiva, desde
+                    el bus del procesador, los buses de discos duros, tarjetas de
+                    expansión y de vídeo hasta las impresoras.<br><br>
+                </p>
+                <div class="imageText">
+                    <img src="../media/images/buses/BUSPARALELO.jpg" width="300px" height="250px">
+                </div>
+                <h6 class = "title">Bus en serie</h6>
+                <p>
+                    En este los datos son enviados, bit a bit y se
+                    reconstruyen por medio de registros o rutinas de software.
+                    Está formado por pocos conductores y su ancho de banda
+                    depende de la frecuencia. Es usado desde hace menos de 10
+                    años en buses para discos duros, tarjetas de expansión y para
+                    el bus del procesador.
+                </p>
+                <div class="imageText">
+                    <img src="../media/images/buses/BUS+EN+SERIE.jpg" width="300px" height="250px">
+                </div>
+                <h6 class = "title">Bus de direcciones</h6>
+                <p>
+                    Es unidireccional debido a que la
+                    información fluye es una solo sentido, del CPU a la memoria
+                    ó a los elementos de entrada y salida.
+                    El CPU puede colocar niveles lógicos en las n líneas de
+                    dirección, con la cual se genera 2n posibles direcciones
+                    diferentes. Cada una de estas direcciones corresponde a una
+                    localidad de la memoria ó dispositivo de E / S.
+                    El procesador envía un código de dirección a la memoria o a
+                    otro dispositivo externo. El tamaño o anchura del bus de
+                    direcciones está especificado por el número de hilos
+                    conductores o pines.
+                </p>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="botText"><a class = "logotecima" href = "https://saltillo.tecnm.mx/"><img class = "logotec"></a></div>
+            <div class="botImg">Instituto Tecnológico de Saltillo</div>
+        </div>
+    </footer>
+    <script src = "https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src = "../scripts.js"></script>
+</body>   
+</html>

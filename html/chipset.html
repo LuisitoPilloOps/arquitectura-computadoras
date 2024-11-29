@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Arquitectura de Computadoras</title>
+    <!-- Icono que aparece en la pestaña-->
+    <link rel = "icon title" href = "media/images/titleicon.png">
+    <!-- Cargando el CSS-->
+    <link rel = "stylesheet" type = "text/css" media = "screen" href = "../css/Style.css"/>
+    <!-- API de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@200&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <meta name = "viewport" content="width=device-width, initial-scale=1">
+</head>
+<body class = "color-fondo">
+    <header class = "header">
+        <div class = "container logo-nav-container">
+            <img class = "icon"><a href= "" class = "logo">Arquitectura de Computadoras</a>
+            <span class="menu-icon"><img class="menu"></span>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="temario.html">Temario</a></li>
+                    <li><a href="autor.html">Autor</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class = "main">
+        <div class="container">
+            <div class = "textPag">
+                <h6 class = "title">Chipset.</h6>
+                <p>
+                    El término chipset está estrechamente relacionado con estos dos conceptos
+                    pero no se puede atribuir a uno de estos componentes.<br><br>
+
+                    El chipset es un conjunto de procesadores situados en la placa base pensados
+                    para que funcionen como si fuera uno solo y realizar las funciones de la placa.
+                    Su función es controlar el flujo de datos entre el procesador, la memoria y
+                    los diferentes periféricos que haya en el ordenador por lo tanto, el chipset
+                    es clave para determinar el rendimiento de un equipo, ya que si ordena el
+                    tráifco de datos de forma un poco lenta, todo el sistema va a ralentizarse.<br><br>
+
+                    Arquitectura actual de chipset, denominada Puente Norte - Puente sur.
+                    Está basada en una doble división estratégica funcional del mismo en base
+                    a la velocidad de los tipos de dispositivos que se pueden conectar.<br><br>
+                </p>
+                <div class="imageText">
+                    <img src="../media/images/chipset/1.jpg" width="300px" height="250px">
+                </div>
+                <h6 class = "title">Puente norte.</h6>
+                <p>
+                    Une los componentes del bus primario(host bus) y suelen ser los de mayor velocidad
+                    de transferencia: microprocesador, memoria y adaptador de video; suele ser de 64bits
+                    y emplea frecuencias muy elevadas. Se encarga de gestionar:
+                </p>
+                <ul>
+                    <li>La memoria</li>
+                    <li>Comunicación con el pricesador</li>
+                    <li>Los puertos gráficos</li>
+                    <li>Comunicacnón con los demás componentes del equipo a través del <u>Southbridge</u></li>
+                </ul>
+                <h6 class = "title">Puente sur.</h6>
+                <p>
+                    Es en realidad un puente para acceder a otros buses más lentos como PCI, IDE,
+                    o USB al que se conectan la BIOS, el controlador del ratón y teclado o los
+                    puertos serie y paralelo. El southbridge se une al northbridge mediante un bus
+                    primario llamado Hub Link. Se encarga de gesrionae los siguientes elementos:
+                </p>
+                <ul>
+                    <li>Administración de la potencia eléctrica</li>
+                    <li>La bios</li>
+                    <li>Bus PCI e ISA</li>
+                    <li>Controlador DMA</li>
+                    <li>Controlador PATA o SATA</li>
+                    <li>Controlador de interrupciones</li>
+                    <li>Interfaz de sonido</li>
+                    <li>Reloj en tiempo real</li>
+                    <li>Soporte ethernet</li>
+                </ul>
+                <div class="imageText">
+                    <img src="../media/images/chipset/2.jpg" width="300px" height="220px">
+                </div>
+                <h6 class = "title">Unidad central de procesamiento.</h6>
+                <p>
+                    Los CPU proporcionan la característica fundamental de la computadora digital y son uno de los 
+                    componentes necesarios encontrados en las computadoras de cualquier tiempo, junto con el 
+                    almacenamiento primario y los dispositivos de entrada/salida.
+                </p>
+                <h6 class = "title">Módulos de entrada y salida.</h6>
+                <p>
+                    Así, decimos que es una transferencia de entrada cuando el periférico es el emisor de la información y tiene como
+                    receptor el computador (procesador o memoria) y decimos que es una transferencia de salida cuando el computador 
+                    es el emisor de la información y tiene como receptor el periférico.
+                </p>
+                <h6 class = "title">Controlador de interrupciones.</h6>
+                <p>
+                    En computación, un controlador programable de interrupciones o PIC (Programmable Interrupt Controller)
+				    es un dispositivo usado para combinar varias fuentes de interrupciones sobre una o más líneas del CPU,
+				    mientras que permite que los niveles de prioridad sean asignados a sus salidas de interrupción 
+                    (no confundir con el microcontrolador PICmicro de Microchip Technology). 
+                    Cuando el dispositivo tiene múltiples salidas de interrupción a imponer, las impondrá en orden de su prioridad relativa. 
+                    Los modos comunes de un PIC incluyen prioridades duras, prioridades rotativas, y prioridades en cascada.
+                    [cita requerida] Los PICs a menudo permiten la conexión en cascada de sus salidas a las entradas entre uno y otro.
+                </p>
+                <div class="imageText">
+                    <img src="../media/images/chipset/3.png" width="300px" height="200px">
+                </div>
+                <h6 class = "title">Controlador de acceso directo a memoria.</h6>
+                <p>
+                    El DMA (acceso directo a la memoria) permite que el dispositivo de red mueva los datos del paquete directamente a la memoria del sistema,
+				    reduciendo la utilización de la CPU. Sin embargo, la frecuencia y los intervalos aleatorios en los cuales los paquetes llegan no permiten 
+				    que el sistema ingrese un estado de energía más bajo. El coalescentes DMA permite que el NIC recoja los paquetes antes de que inicie 
+				    un evento DMA. Esto puede aumentar la latencia de la red, pero también aumenta las probabilidades de que el sistema consuma menos energía.
+				    Los adaptadores y dispositivos de red basados en el controlador Ethernet Intel® I350 (y controladores posteriores) Asistencia la fusión de DMA.
+                </p>
+                <h6 class = "title">Circuitos de control.</h6>
+                <p>
+                    Circuito de mando o maniobra. Es el encargado de controlar el funcionamiento del contactor. Normalmente consta de elementos de mando (pulsadores, 
+				    interruptores,etc. identificados la primera letra con una S, elementos de protección, bobinas de contactores,temporizadores, y contactos auxiliares.
+                </p>
+                <h6 class = "title"> Controladores de video.</h6>
+                <p>
+                    El controlador de la tarjeta de video (también denominada unidad de procesamiento de gráficos [GPU]) es un software que permite que el sistema operativo 
+				    y la aplicación de software utilicen el hardware de gráficos de la computadora.
+                </p>
+            </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="botText"><a class = "logotecima" href = "https://saltillo.tecnm.mx/"><img class = "logotec"></a></div>
+            <div class="botImg">Instituto Tecnológico de Saltillo</div>
+        </div>
+    </footer>
+    <script src = "https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src = "../scripts.js"></script>
+</body>   
+</html>

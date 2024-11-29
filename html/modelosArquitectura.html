@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Arquitectura de Computadoras</title>
+    <!-- Icono que aparece en la pestaña-->
+    <link rel = "icon title" href = "media/images/titleicon.png">
+    <!-- Cargando el CSS-->
+    <link rel = "stylesheet" type = "text/css" media = "screen" href = "../css/Style.css"/>
+    <!-- API de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@200&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <meta name = "viewport" content="width=device-width, initial-scale=1">
+</head>
+<body class = "color-fondo">
+    <header class = "header">
+        <div class = "container logo-nav-container">
+            <img class = "icon"><a href= "" class = "logo">Arquitectura de Computadoras</a>
+            <span class="menu-icon"><img class="menu"></span>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="temario.html">Temario</a></li>
+                    <li><a href="autor.html">Autor</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class = "main">
+        <div class="container">
+            <div class = "textPag">
+                <h6 class = "title">Arquitectura Segmentada</h6>
+                    <p>
+                        Es una de las tecnologías utilizadas para realizar la
+                        segmentación o paralelismo. Divide el procesador, en etapas,
+                        procesa una instrucción diferente en cada una y trabaja con
+                        varias a la vez.
+                        Pueden trabajar de forma paralela, en diferentes
+                        instrucciones, utilizando una cola de instrucciones para su
+                        comunicación, denominado entubamiento.
+                        La dependencia de datos y de control, que tiene como efecto
+                        la disminución del rendimiento del pipelining.
+                    </p>
+
+                    <p>
+                        La segmentación de cauce (pipelining) es una forma efectiva
+                        de organizar el hardware del CPU para realizar más de una
+                        operación al mismo tiempo.
+                        Consiste en descomponer el proceso de ejecución de las
+                        instrucciones en fases o etapas que permitan una ejecución
+                        simultánea.
+                        Explota el paralelismo entre las instrucciones de un flujo
+                        secuencial.
+                    </p>
+
+                    <p>
+                        La segmentación es una técnica de implementación por la
+                        cual se solapa la ejecución de múltiples instrucciones.
+                        La técnica de implementación clave utilizada para hacer
+                        CPU rápidas.
+                        La segmentación es como una línea de ensamblaje: cada
+                        etapa de la segmentación completa una parte de la
+                        instrucción.
+                    </p>
+
+                    <p>
+                        Como en una línea de ensamblaje, la acción a realizar en una
+                        instrucción se descompone en partes más pequeñas, cada una
+                        de las cuales necesita una fracción del tiempo necesario para
+                        completar la instrucción completa.
+                        Cada uno de estos pasos se define como etapa de la
+                        segmentación o segmento.
+                        Las etapas están conectadas, cada una a la siguiente, para
+                        formar una especie de cauce las instrucciones se entran por
+                        un extremo, son procesadas a través de las etapas y salen por
+                        el otro.
+                        La productividad de la segmentación está determinada por la
+                        frecuencia con que una instrucción salga del cauce.
+                    </p><br>
+                    
+                    <div class="imageText">
+                        <img src="../media/images/ModelosDeArquitectura/segmentada.png" width="300px" height="125px">
+                    </div>
+
+                    <h6 class = "title">Multiprocesamiento</h6>
+                    <p>
+                        Se denomina multiprocesador a un computador que cuenta
+                        con dos o más microprocesadores (CPUs).
+                        El multiprocesador puede ejecutar simultáneamente varios
+                        hilos pertenecientes a un mismo proceso o bien a procesos
+                        diferentes.
+                        La arquitectura NUMA, donde cada procesador tiene acceso
+                        y control exclusivo a una parte de la memoria.
+                        La arquitectura SMP, donde todos los procesadores
+                        comparten toda la memoria.
+                        Para que un multiprocesador opere correctamente necesita
+                        un sistema operativo especialmente diseñado para ello.
+                        La mayoría de los sistemas operativos actuales poseen esta
+                        capacidad.
+                    </p>
+                    <p>
+                        Cuando se desea incrementar el desempeño más de lo que
+                        permite la técnica de segmentación (pipeline), se requiere
+                        utilizar más de un procesador para la ejecución del programa
+                        de aplicación.
+                        Los CPU de multiprocesamiento según Flynn se clasifican
+                        de la siguiente manera:
+    
+                        SISO - (Single Instruction, Single Operand) computadoras
+                        Monoprocesador<br><br>
+                        SIMO - (Single Instruction, Multiple Operand) procesadores
+                        vectoriales, Exenciones MMX<br><br>
+                        MISO - (Multiple Instruction, Single Operand) No
+                        implementado<br><br>
+                        MIMO - (Multiple Instruction, Multiple Operand) sistemas
+                        SMP, Clusters, GPUs<br><br>
+                    </p>
+
+                    <div class="imageText">
+                        <img src="../media/images/ModelosDeArquitectura/multiprocesamiento.png" width="300px" height="125px">
+                    </div>
+
+                    </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="botText"><a class = "logotecima" href = "https://saltillo.tecnm.mx/"><img class = "logotec"></a></div>
+            <div class="botImg">Instituto Tecnológico de Saltillo</div>
+        </div>
+    </footer>
+    <script src = "https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src = "../scripts.js"></script>
+</body>   
+</html>
